@@ -13,8 +13,8 @@ ytrain = pd.read_csv("ytrain.csv").squeeze()
 ytest  = pd.read_csv("ytest.csv").squeeze()
 
 numeric_features =  "CustomerID", "ProdTaken", "Age", "TypeofContact",
-    "CityTier", "DurationOfPitch", "Occupation", "Gender","NumberOfPersonVisiting", 
-    "NumberOfFollowups","ProductPitched", "PreferredPropertyStar", "MaritalStatus", "NumberOfTrips", 
+    "CityTier", "DurationOfPitch", "Occupation", "Gender","NumberOfPersonVisiting",
+    "NumberOfFollowups","ProductPitched", "PreferredPropertyStar", "MaritalStatus", "NumberOfTrips",
     "Passport", "OwnCar", "NumberOfChildrenVisiting", "Designation", "MonthlyIncome", "ProdTaken"
 categorical_features = ["Type"]
 
