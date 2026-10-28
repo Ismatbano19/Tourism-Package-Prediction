@@ -1,0 +1,23 @@
+name: Debug repository and dataset
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Debug layout
+        run: |
+          echo "Current directory:"
+          pwd
+
+          echo "Repository files:"
+          ls -la
+
+          echo "Data folder:"
+          ls -la data || true
+
+          echo "Check tourism.csv:"
+          python -c "import pandas as pd; df = pd.read_csv('data/tourism.csv'); print('Shape:', df.shape); print('Columns:', df.columns.tolist())" || echo "Could not read dataset"
