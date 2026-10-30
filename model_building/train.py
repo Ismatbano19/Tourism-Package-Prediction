@@ -16,7 +16,7 @@ numeric_features =  "CustomerID", "ProdTaken", "Age", "TypeofContact",
     "CityTier", "DurationOfPitch", "Occupation", "Gender","NumberOfPersonVisiting",
     "NumberOfFollowups","ProductPitched", "PreferredPropertyStar", "MaritalStatus", "NumberOfTrips",
     "Passport", "OwnCar", "NumberOfChildrenVisiting", "Designation", "MonthlyIncome", "ProdTaken"
-categorical_features = ["Type"]
+categorical_features = ["TypeofContact", "CityTier", "Occupation", "Gender", "MaritalStatus", "Passport", "OwnCar", "Designation"]
 
 # Handle class imbalance
 class_weight = ytrain.value_counts()[0] / ytrain.value_counts()[1]
